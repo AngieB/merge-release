@@ -2,7 +2,7 @@
 
 set -e
 
-mkdir -p ${NPM_CONFIG_USERCONFIG} ; 
+mkdir -p /home/runner/work/_temp ; 
 
 if [ -n "$NPM_AUTH_TOKEN" ]; then
   # Respect NPM_CONFIG_USERCONFIG if it is provided, default to $HOME/.npmrc
