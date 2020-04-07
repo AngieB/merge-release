@@ -7,8 +7,8 @@ mkdir -p /home/runner/work/_temp ;
 if [ -n "$NPM_AUTH_TOKEN" ]; then
   # Respect NPM_CONFIG_USERCONFIG if it is provided, default to $HOME/.npmrc
   NPM_CONFIG_USERCONFIG="${NPM_CONFIG_USERCONFIG-"$HOME/.npmrc"}"
-  NPM_REGISTRY_URL="${NPM_REGISTRY_URL-registry.npmjs.org}"
   NPM_REGISTRY="${NPM_REGISTRY}"
+  NPM_REGISTRY_URL="$NPM_REGISTRY_SCHEME://$NPM_REGISTRY"
   NPM_STRICT_SSL="${NPM_STRICT_SSL-true}"
   NPM_REGISTRY_SCHEME="https"
   
